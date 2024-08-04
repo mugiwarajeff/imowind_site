@@ -1,21 +1,46 @@
-import Image from "next/image";
-import img from "/public/images/tangarasimagem.jpeg";
 import styles from "./ImovelView.module.scss";
-import { IoIosArrowDropright } from "react-icons/io";
-import { IoIosArrowDropleft } from "react-icons/io";
+import ImovelViewCard from "./ImovelViewCard/ImovelViewCard";
+import ImovelViewOptions from "./ImovelViewOptions/ImovelViewOptions";
 
-interface ImovelViewProps {
-    isCard: boolean
-}
+export default function ImovelView() {
 
-export default function ImovelCard({isCard} : ImovelViewProps){
+    return <div className={styles.imovelView}>
+        <div className={styles.backgroundSquare}>
 
-    return <div className={isCard ? styles.imovelCard : styles.imovelView }>
-       <Image 
-            src={img} 
-            alt=""
-        />
-        <IoIosArrowDropleft />
-        <IoIosArrowDropright />
-    </div>;
+        </div>
+        <div className={styles.imovelCards}>
+            <div className={styles.spaces4}>
+               <ImovelViewCard 
+               imagePath="/images/tangarasimagem.jpeg"
+               topPosition={230}/>
+            </div>
+            <div className={styles.spaces4}>
+                <ImovelViewCard 
+                    imagePath="/images/tangarasimagem.jpeg"
+                    topPosition={230}/>
+
+            </div>
+            <div className={styles.spaces2}>
+                <ImovelViewOptions />
+            </div>
+            <div className={styles.spaces3}>
+                <ImovelViewCard 
+                    imagePath="/images/tangarasimagem.jpeg"
+                    topPosition={150}/>
+
+            </div>
+            <div className={styles.spaces3}>
+                <ImovelViewCard 
+                imagePath="/images/tangarasimagem.jpeg"
+                topPosition={150}/>
+
+            </div>
+            <div className={styles.spaces3}>
+                <ImovelViewCard 
+                    imagePath="/images/tangarasimagem.jpeg"
+                    topPosition={150}/>
+
+            </div>
+        </div>
+    </div>
 }

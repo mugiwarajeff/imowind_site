@@ -4,4 +4,19 @@
     width: 100vw;
     height: 100px;
     background-color: $primarycolor;
+    z-index: 1;
+
+    .sectionTitle {
+        position: absolute;
+        left: 10%;
+        font-size: 3rem;
+        color: white;
+    }
+
+    .sectionTitleRight {
+        position: absolute;
+        right: 10%;
+        font-size: 3rem;
+        color: white;
+    }
 }

@@ -1,0 +1,14 @@
+.brokersNavigator {
+    margin-top: 10%;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+
+    font-size: 2.5rem;
+    gap: 20px;
+
+    span {
+        position: relative;
+        top: 15px;
+    }
+}

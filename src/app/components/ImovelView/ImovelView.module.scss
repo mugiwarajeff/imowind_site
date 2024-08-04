@@ -1,10 +1,42 @@
-.imovelCard {}
+@import "src/shared/theme/colors.scss";
+
 
 .imovelView {
-    width: 100vw;   
+    position: relative;
+    background-color: $whiteColor;
+    height: 700px;
 
-    * {
+    .backgroundSquare {
+        height: 60%;
+        width: 70%;
+        background-color: $primarycolor;
         position: absolute;
-        width: 100vw;
+        right: 0;
+        
+
+    }
+
+    .imovelCards {
+        position: absolute;
+        width: 80%;
+        height: 100%;
+        max-width: 0 5% 0 5%;
+        left: 15%;
+        display: grid;
+        grid-template-columns: repeat(10, 1fr);
+        grid-template-rows: repeat(2, minmax(100px, 400px));
+        column-gap: 20px;
+    }
+
+    .spaces4 {
+        grid-column: span 4;
+    }
+
+    .spaces3 {
+        grid-column: span 3;
+    }
+
+    .spaces2 {
+        grid-column: span 2;
     }
 }

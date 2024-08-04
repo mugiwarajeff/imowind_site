@@ -1,0 +1,28 @@
+@import "src/shared/theme/colors.scss";
+
+.imovelViewCard {
+    position: relative;
+    width: 100%;
+
+
+    .imovelImage {
+        position: absolute;
+        height: 100%;
+        width: 100%;  
+
+    }
+
+    .infoCard {
+        position: absolute;
+        color: $whiteColor;
+        left: 20px;
+        
+        z-index: 2;
+
+        h3, h5 {
+            font-size: 0.8rem;
+            margin: 5px;
+        }
+        
+    }
+}

@@ -1,0 +1,26 @@
+.brokersInfo {
+    height: 550px;
+    position: relative;
+
+    .aboutContainer {
+        box-sizing: border-box;
+        position: absolute;
+        margin: 0px;
+        padding: 0px;
+        z-index: 1;
+    }
+
+    .textContainer {
+        margin-left: 10%;
+        margin-top: 2%;
+        width: 50%;
+        font-size: 1.5rem;
+    }
+
+    .cardContainer {
+        position: absolute;
+        z-index: 10;
+        right: 10%;
+        top: 15px;
+    }
+}

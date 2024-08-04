@@ -1,0 +1,23 @@
+.imovelSlider {
+    
+    @media screen and (max-width: 450px) {
+        height: 230px;
+    }
+
+
+    @media screen and (min-width: 450px) and (max-width: 650px) {
+        height: 230px;
+    }
+
+    @media screen and (min-width: 650px) and (max-width: 900px) {
+        height: 340px;
+    }
+
+    @media screen and (min-width: 900px) and (max-width: 1200px) {
+        height: 440px;
+    }
+
+    @media screen and (min-width: 1200px)  {
+        height: 700px;
+    }   
+}

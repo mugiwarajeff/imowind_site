@@ -1,0 +1,35 @@
+@import "src/shared/theme/colors.scss";
+
+
+
+.callingTexts {
+    height: 400px;
+    width: 90%;
+    background-color: $whiteColor;
+    margin: 0px 5% 0px 5%;
+    border-radius: 10px;
+    position: relative;
+    bottom: 20px;
+    display: flex;
+
+    flex-direction: row;
+
+    justify-content: center;
+    align-items: center;
+    
+    .cardText {
+        margin: 0px 5% 0px 5%;
+        background-color: $whiteColor;
+        width: 25%;
+
+        h3 {
+            font-size: 2rem;
+        }
+
+        p {
+            font-size: 1rem;
+        }
+    }
+
+    
+}

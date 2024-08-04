@@ -1,0 +1,14 @@
+@import "src/shared/theme/colors.scss";
+
+.brokersInfo {
+    display: flex;  
+    flex-direction: column;
+
+    .sectionTitle {
+        font-size: 4rem;
+        color: $blackColor;
+        align-self: center;
+        justify-self: center;
+        margin-bottom: 150px;
+    }
+}

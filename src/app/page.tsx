@@ -1,7 +1,13 @@
 import styles from "./page.module.scss";
 import Header from "./components/Header/Header";
 import SectionSpliter from "./components/SectionSpliter/SectionSpliter";
+import ImovelSlider from "./components/ImovelSlider/ImovelSlider";
+import CallingText from "./components/CallingTexts/CallingText";
 import ImovelView from "./components/ImovelView/ImovelView";
+
+import BrokersSection from "./components/BrokersSection/BrokersSection";
+import GalerySection from "./components/GalerySection/GalerySection";
+import DepositionSection from "./components/DepositionSection/DepositionSection";
 
 
 
@@ -11,9 +17,14 @@ export default function Home() {
       <main className={styles.page}>
         <Header/>
         <SectionSpliter/>
-        <ImovelView isCard={false}/>
+        <ImovelSlider/>
+        <SectionSpliter height={35}/>
+        <CallingText />
+        <ImovelView />
+        <BrokersSection /> 
+        <GalerySection /> 
+        <DepositionSection />
       </main>
     
-   
   );
 }
