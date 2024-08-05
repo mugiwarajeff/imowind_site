@@ -2,12 +2,17 @@ import styles from "./FAQSection.module.scss";
 import questionsJson from "../../data/questions.json";
 import Question from "@/app/interfaces/question";
 import QuestionCard from "./QuestionCard/QuestionCard";
+import { RefObject } from "react";
 
-export default function FAQSection() {
+
+interface FaqSectionProps {
+    faqRef: RefObject<HTMLDivElement>
+}
+export default function FAQSection(props: FaqSectionProps) {
 
     const questions: Question[] = questionsJson;
 
-    return <div className={styles.facSection}>
+    return <div ref={props.faqRef} className={styles.facSection}>
         <h2 className={styles.title}>
             FAQ <br />
             Perguntas Frequentes

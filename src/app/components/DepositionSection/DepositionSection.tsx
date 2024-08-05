@@ -2,11 +2,14 @@ import DepositionCard from "./DepositionCard/DepositionCard";
 import styles from "./DepositionSection.module.scss";
 import Deposition from "@/app/interfaces/deposition";
 import depositionJson from "../../data/depositions.json";
+import { RefObject } from "react";
 
-
-export default function DepositionSection(){
+interface DepositionSectionProps {
+    depositionsRef: RefObject<HTMLDivElement>
+}
+export default function DepositionSection(props: DepositionSectionProps){
     const depositions : Deposition[] = depositionJson;
-    return <div className={styles.depositionSection}>
+    return <div ref={props.depositionsRef} className={styles.depositionSection}>
         <h2 className={styles.title}>    
             Depoimentos
         </h2>

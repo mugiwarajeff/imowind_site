@@ -1,9 +1,10 @@
 "use client"
+import { Property } from "@/app/interfaces/propertie";
 import styles from "./ImovelViewStyles.module.scss"
 import Image from "next/image";
 
 interface ImovelViewCardProps {
-    imagePath: string
+    property: Property
     topPosition: number
 }
 
@@ -12,7 +13,7 @@ export default function ImovelViewCard(props: ImovelViewCardProps){
         <div className={styles.imovelImage}>
             <Image 
                 
-                src={props.imagePath}
+                src={props.property.imagePath}
                 width={600}
                 height={500}
                 alt=""
@@ -27,16 +28,16 @@ export default function ImovelViewCard(props: ImovelViewCardProps){
             style={{top: props.topPosition}}
             >
             <h3>
-                Rio de Janeiro
+                {props.property.city} - {props.property.state}
             </h3>
             <h3>
-                Vargem Pequena
+                {props.property.neighborhood}
             </h3>
             <h5>
-                Casa em condominio a venda, 180m2
+                {props.property.type}, {props.property.size}
             </h5>
             <h5>
-                R$2.340.000,00
+                {props.property.price}
             </h5>
         </div>
     </div>

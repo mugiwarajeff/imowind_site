@@ -1,9 +1,14 @@
+import { RefObject } from "react";
 import BrokersInfo from "./BrokersInfo/BrokersInfo";
 import styles from "./BrokersSection.module.scss";
 
-export default function BrokersSection() {
+interface BrokersSectionProps{
+    brokersRef: RefObject<HTMLDivElement>
+}
 
-    return <div className={styles.brokersInfo}>
+export default function BrokersSection(props: BrokersSectionProps) {
+
+    return <div ref={props.brokersRef} className={styles.brokersInfo}>
         <h2 className={styles.sectionTitle}>
             Nossos Corretores
         </h2>

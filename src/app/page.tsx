@@ -1,3 +1,5 @@
+"use client"
+
 import styles from "./page.module.scss";
 import Header from "./components/Header/Header";
 import SectionSpliter from "./components/SectionSpliter/SectionSpliter";
@@ -11,25 +13,32 @@ import DepositionSection from "./components/DepositionSection/DepositionSection"
 import AdvertisePropertieSection from "./components/AdvertisePropertieSection/AdvertisePropertieSection";
 import FAQSection from "./components/FAQSection/FAQSection";
 import FooterSection from "./components/Footer/FooterSection";
+import { useRef } from "react";
 
 
 
 
 export default function Home() {
+  const brokersSections = useRef<HTMLDivElement>(null);
+  const propertiesSections = useRef<HTMLDivElement>(null);
+
+  const depositionsSections = useRef<HTMLDivElement>(null);
+  const faqSections = useRef<HTMLDivElement>(null);
+  const advertiseSections = useRef<HTMLDivElement>(null);
   return (
    
       <main className={styles.page}>
-        <Header/>
+        <Header brokersRef={brokersSections} advertiseRef={advertiseSections} depositionsRef={depositionsSections} faqRef={faqSections} propertiesRef={propertiesSections}/>
         <SectionSpliter/>
         <ImovelSlider/>
         <SectionSpliter height={35}/>
         <CallingText />
-        <ImovelView />
-        <BrokersSection /> 
+        <ImovelView propertiesRef={propertiesSections} />
+        <BrokersSection brokersRef={brokersSections} /> 
         <GalerySection /> 
-        <DepositionSection />
-        <AdvertisePropertieSection />
-        <FAQSection />
+        <DepositionSection  depositionsRef={depositionsSections}/>
+        <AdvertisePropertieSection  advertiseRef={advertiseSections}/>
+        <FAQSection  faqRef={faqSections}/>
         <FooterSection />
       </main>
     

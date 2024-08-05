@@ -1,9 +1,12 @@
+import { RefObject } from "react";
 import styles from "./AdvertisePropertieSection.module.scss";
 
+interface AdvertisePropertieSectionProps {
+    advertiseRef: RefObject<HTMLDivElement>,
+}
+export default function AdvertisePropertieSection (props: AdvertisePropertieSectionProps){
 
-export default function AdvertisePropertieSection (){
-
-    return <div className={styles.advertisePropertieSection}>
+    return <div ref={props.advertiseRef} className={styles.advertisePropertieSection}>
         <h2 className={styles.title}>
             Anuncie seu Imóvel
         </h2>
