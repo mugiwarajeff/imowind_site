@@ -1,0 +1,23 @@
+@import "src/shared/theme/colors.scss";
+
+
+.facSection{
+    margin-top: 50px;
+    width: 100vw;
+
+    .title {
+        font-size: 4rem;
+        color: $blackColor;
+        text-align: center;
+    }
+
+    .questionsContainer {
+        margin: 100px 10%;
+        padding: 30px 0px;
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+        justify-content: center;
+        align-items: center;
+    }
+}

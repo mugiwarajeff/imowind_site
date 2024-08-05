@@ -8,6 +8,10 @@ import ImovelView from "./components/ImovelView/ImovelView";
 import BrokersSection from "./components/BrokersSection/BrokersSection";
 import GalerySection from "./components/GalerySection/GalerySection";
 import DepositionSection from "./components/DepositionSection/DepositionSection";
+import AdvertisePropertieSection from "./components/AdvertisePropertieSection/AdvertisePropertieSection";
+import FAQSection from "./components/FAQSection/FAQSection";
+import FooterSection from "./components/Footer/FooterSection";
+
 
 
 
@@ -24,6 +28,9 @@ export default function Home() {
         <BrokersSection /> 
         <GalerySection /> 
         <DepositionSection />
+        <AdvertisePropertieSection />
+        <FAQSection />
+        <FooterSection />
       </main>
     
   );

@@ -17,6 +17,12 @@ export default function Header(){
                 label="Anúncie Aqui"/>
             <ImoButton 
                 label="Imóveis"/>
+            <ImoButton 
+                label="Nossos Corretores"/>
+            <ImoButton 
+                label="Depoimentos"/>
+            <ImoButton 
+                label="FAQ"/>
         </div>
     </div>
 }
